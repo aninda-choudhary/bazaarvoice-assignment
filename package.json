@@ -1,0 +1,22 @@
+{
+  "name": "api-worker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "setup-kafka": "node setup-kafka/admin.js",
+    "setup-cassandra": "node setup-cassandra/cassandraDBSetup.js",
+    "worker": "node api-processor/consumer.js group1",
+    "producer": "node api-scheduler/producer.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cassandra-driver": "^4.7.2",
+    "dotenv": "^16.4.5",
+    "kafkajs": "^2.2.4",
+    "ts-node": "^10.9.2",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.2"
+  }
+}
